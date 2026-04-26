@@ -34,7 +34,7 @@ collections:
     delete: true
     slug: "{{fields.id}}"
     identifier_field: displayName
-    summary: "{{displayName}} — {{sector}} ({{#if published}}published{{else}}draft{{/if}})"
+    summary: "{{displayName}} — {{sector}} ({{published | ternary('published', 'draft')}})"
     sortable_fields: [publishedAt, displayName, sector]
     fields:
       - { name: id, label: "ID (filename slug, lowercase, no spaces)", widget: string, hint: "Must match filename, e.g. 'rina-001'. Cannot change after creation." }

@@ -6,7 +6,7 @@ backend:
   # Default proxy used here: sterlingwes/decap-proxy on Cloudflare Workers,
   # which serves the handshake at /auth. Replace with your deployed Worker URL.
   # See ADMIN_SETUP.md.
-  base_url: cms-auth.v2vbridge.workers.dev
+  base_url: https://cms-auth.v2vbridge.workers.dev
   auth_endpoint: auth
 
 # Direct-commit mode: each save commits straight to the configured branch.

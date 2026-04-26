@@ -7,14 +7,14 @@ This guide walks through everything you need to do *once* to take the V2V Bridge
 
 End state:
 
-| What                                       | Lives at                                        |
-| ------------------------------------------ | ----------------------------------------------- |
-| Public site (default Vercel domain)        | `https://v2vbridge.vercel.app`                  |
-| Public site (canonical custom domain)      | `https://v2vbridge.capec.consulting`            |
-| Stakeholder admin panel                    | `https://v2vbridge.capec.consulting/admin`      |
-| OAuth proxy (separate tiny Vercel project) | `https://v2v-cms-auth.vercel.app` (you pick)    |
+| What                                  | Lives at                                            |
+| ------------------------------------- | --------------------------------------------------- |
+| Public site (default Vercel domain)   | `https://v2vbridge.vercel.app`                      |
+| Public site (canonical custom domain) | `https://v2vbridge.capec.consulting`                |
+| Stakeholder admin panel               | `https://v2vbridge.capec.consulting/admin`          |
+| OAuth proxy (Cloudflare Worker)       | `https://v2v-cms-auth.<you>.workers.dev` (you pick) |
 
-Total cost: **$0**. Vercel Hobby covers everything, Decap CMS is open source, GitHub OAuth Apps are free.
+Total cost: **$0**. Vercel Hobby covers the site, Cloudflare Workers free tier covers the OAuth proxy, Decap CMS is open source, GitHub OAuth Apps are free.
 
 ---
 
@@ -95,7 +95,10 @@ You will only do this once. It takes about 10 minutes.
 ## What you need
 
 - The same GitHub account that owns the repo (or one with admin rights on it).
-- The same Vercel account from Part 1 (the OAuth proxy lives in the same account, as a *separate* small project).
+- A free [Cloudflare](https://dash.cloudflare.com/sign-up) account (Workers free tier covers this comfortably — 100,000 requests/day, way more than the CMS will ever produce).
+- Node.js 18+ on your local machine (just for running `npx wrangler` once during deploy).
+
+> **Heads-up on the proxy choice.** Decap CMS doesn't ship its own OAuth proxy — it links out to a list of community-maintained ones. We're going with **[`sterlingwes/decap-proxy`](https://github.com/sterlingwes/decap-proxy)** (Cloudflare Worker, ~100 stars, actively maintained, simple two-secret config). It has no LICENSE file in the repo, so for extra safety I recommend forking it into your own GitHub account first and deploying from your fork — you'll then own a copy you control regardless of what happens upstream.
 
 ## Step 2.1 — Create a GitHub OAuth App
 
@@ -104,36 +107,73 @@ You will only do this once. It takes about 10 minutes.
 2. Fill in:
    - **Application name**: `V2V Bridge CMS`
    - **Homepage URL**: `https://v2vbridge.capec.consulting`
-   - **Authorization callback URL**: `https://YOUR-PROXY-URL.vercel.app/callback`
+   - **Authorization callback URL**: `https://YOUR-WORKER.workers.dev/callback`
      (you don't have this URL yet — put a placeholder, you'll edit it after Step 2.2.)
 3. Click **Register application**.
 4. On the next screen:
    - Copy the **Client ID** (visible).
    - Click **Generate a new client secret**, copy it. You won't see it again.
 
-Keep the Client ID and Client Secret somewhere safe — you'll paste them into Vercel in Step 2.2.
+Keep the Client ID and Client Secret somewhere safe — you'll paste them into Cloudflare in Step 2.2.
 
-## Step 2.2 — Deploy the OAuth proxy
+## Step 2.2 — Deploy the OAuth proxy to Cloudflare Workers
 
-The proxy is a tiny serverless function that exchanges GitHub's auth code for a token. Decap maintains an official one.
+You'll do this once on your own machine.
 
-1. Go to https://github.com/decaporg/decap-proxy
-2. Click the **Deploy** button (or fork the repo and import it into Vercel).
-3. In Vercel's import screen:
-   - **Project Name**: `v2v-cms-auth` (or any name — this is *not* the same project as the main site).
-   - Add environment variables:
-     - `OAUTH_CLIENT_ID` → the Client ID from Step 2.1
-     - `OAUTH_CLIENT_SECRET` → the Client Secret from Step 2.1
-     - `OAUTH_PROVIDER` → `github`
-4. Click **Deploy**. Vercel gives you a URL like `https://v2v-cms-auth.vercel.app`.
+1. **(Recommended)** Fork [`sterlingwes/decap-proxy`](https://github.com/sterlingwes/decap-proxy) on GitHub into your own account so you own the copy you deploy from. (Click **Fork** in the top right.)
 
-Now go back to the GitHub OAuth App from Step 2.1 and update the **Authorization callback URL** to:
+2. Clone your fork and install:
+   ```bash
+   git clone https://github.com/YOUR-GITHUB-USER/decap-proxy.git
+   cd decap-proxy
+   npm install        # or yarn install — the repo uses yarn.lock but npm works
+   ```
 
-```
-https://v2v-cms-auth.vercel.app/callback
-```
+3. Configure Wrangler (Cloudflare's deploy CLI):
+   ```bash
+   cp wrangler.toml.sample wrangler.toml
+   ```
+   Open `wrangler.toml` and set the worker name — for example:
+   ```toml
+   name = "v2v-cms-auth"
+   ```
+   That becomes the URL: `v2v-cms-auth.<your-cloudflare-subdomain>.workers.dev`.
 
-(Use whatever URL Vercel actually assigned — you can also map a custom domain like `auth.capec.consulting` to it later if you want.)
+4. Authenticate Wrangler against your Cloudflare account:
+   ```bash
+   npx wrangler login
+   ```
+   Browser window opens, you authorise, done.
+
+5. Push the GitHub OAuth credentials in as Cloudflare secrets (these never get committed):
+   ```bash
+   npx wrangler secret put GITHUB_OAUTH_ID
+   # Paste the Client ID from Step 2.1, press Enter
+
+   npx wrangler secret put GITHUB_OAUTH_SECRET
+   # Paste the Client Secret from Step 2.1, press Enter
+   ```
+   *Optional:* if your repo is private (it's currently public, so skip this), also run:
+   ```bash
+   npx wrangler secret put GITHUB_REPO_PRIVATE
+   # Type 1, press Enter
+   ```
+
+6. Deploy:
+   ```bash
+   npx wrangler deploy
+   ```
+   At the end, Wrangler prints your Worker URL — something like:
+   ```
+   Published v2v-cms-auth (1.45 sec)
+     https://v2v-cms-auth.YOUR-SUBDOMAIN.workers.dev
+   ```
+   Visiting that URL should show "Hello 👋". That's the proxy responding.
+
+7. Go back to the GitHub OAuth App from Step 2.1 and update the **Authorization callback URL** to:
+   ```
+   https://v2v-cms-auth.YOUR-SUBDOMAIN.workers.dev/callback
+   ```
 
 ## Step 2.3 — Point the admin at your proxy
 
@@ -143,10 +183,12 @@ Edit `public/admin/config.yml` in this repo and update the highlighted lines:
 backend:
   name: github
   repo: shakibbinkabir/v2v
-  branch: integration-v1                          # ← match your Vercel production branch
-  base_url: https://v2v-cms-auth.vercel.app       # ← your proxy URL from Step 2.2
-  auth_endpoint: api/auth
+  branch: integration-v1                                              # ← match your Vercel production branch
+  base_url: https://v2v-cms-auth.YOUR-SUBDOMAIN.workers.dev           # ← your Worker URL from Step 2.2
+  auth_endpoint: auth                                                 # sterlingwes/decap-proxy serves the handshake at /auth
 ```
+
+> **Important — `auth_endpoint`**: different community proxies expose the handshake under different paths. `sterlingwes/decap-proxy` uses `/auth` (and `/callback`), so set `auth_endpoint: auth`. If you ever swap to a different proxy, read that proxy's source/README and update this line to match the path it serves.
 
 Commit and push. Vercel rebuilds the main site automatically; once it's done, the admin handshake is wired up.
 
@@ -200,8 +242,9 @@ The CMS fully respects the bilingual (EN + BN) structure: every text field has b
 # Cost
 
 Free.
-- Decap CMS itself is open source.
-- Vercel Hobby plan covers both the main site and the OAuth proxy at $0.
+- Decap CMS itself is open source (MIT).
+- Vercel Hobby plan covers the main site at $0.
+- Cloudflare Workers free tier covers the OAuth proxy at $0 (100k requests/day; the CMS will use a handful per day at most).
 - GitHub OAuth Apps are free.
 - TLS certificates on `v2vbridge.capec.consulting` are auto-provisioned by Vercel at $0.
 
@@ -213,10 +256,14 @@ Free.
 
 **Sitemap / OG tags show the wrong URL** — `NEXT_PUBLIC_SITE_URL` is missing or wrong in Vercel project settings. Re-check Step 1.1, redeploy.
 
-**"Failed to load entries" after CMS login** — the OAuth app callback URL doesn't match your deployed proxy URL. Re-check Step 2.1 / Step 2.2.
+**"Failed to load entries" after CMS login** — the OAuth app callback URL doesn't match your deployed Worker URL. Re-check Step 2.1 / Step 2.2.
+
+**Login popup opens, GitHub authorise screen never appears** — `auth_endpoint` in `config.yml` is wrong for your proxy. For `sterlingwes/decap-proxy` it must be `auth` (the Worker serves `/auth`). Different community proxies use different paths.
 
 **Login popup closes with no error** — usually a popup blocker. Allow popups for `v2vbridge.capec.consulting`.
 
 **Save succeeds but nothing changes on the live site** — Vercel is rebuilding. Wait ~60 seconds and refresh.
 
 **"Branch not found"** — `config.yml` `branch:` doesn't match Vercel's production branch. Make sure both point at the same branch (Step 1.2 + Step 2.3).
+
+**Worker URL returns "Hello 👋" only — never reaches the auth flow** — that's the Worker's default response when no path matches. The CMS hits `/auth` (which redirects to GitHub) and `/callback` (which finishes the handshake). If you visit those paths directly they'll error without query params, which is normal — only Decap should hit them.

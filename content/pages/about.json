@@ -1,0 +1,53 @@
+{
+  "slug": "about",
+  "title": {
+    "en": "About V2V Bridge",
+    "bn": "V2V Bridge সম্পর্কে"
+  },
+  "sections": [
+    {
+      "heading": {
+        "en": "The project in one paragraph",
+        "bn": "এক প্যারাগ্রাফে প্রকল্পটি"
+      },
+      "body": {
+        "en": "V2V Bridge — short for Voice to Venture Bridge — is a 3-month storytelling project that puts the work of women entrepreneurs in Satkhira on the public record in their own words. The project runs from April through June 2026 under Plan International Bangladesh's Youth Equality Award 2026 and is implemented by CapeC. Consulting. The site you are reading is the public face of that project.",
+        "bn": "V2V Bridge — Voice to Venture Bridge-এর সংক্ষিপ্ত রূপ — তিন মাসের একটি গল্প-বলার প্রকল্প, যেখানে সাতক্ষীরার নারী উদ্যোক্তাদের কাজকে তাঁদের নিজের ভাষায় জনপরিসরে নথিভুক্ত করা হয়। প্রকল্পটি প্ল্যান ইন্টারন্যাশনাল বাংলাদেশের ইয়ুথ ইক্যুয়ালিটি অ্যাওয়ার্ড ২০২৬-এর অধীনে এপ্রিল থেকে জুন ২০২৬ পর্যন্ত চলে এবং CapeC. কনসালটিং কর্তৃক বাস্তবায়িত হয়। আপনি যে সাইটটি পড়ছেন তা সেই প্রকল্পের সর্বজনীন রূপ।"
+      }
+    },
+    {
+      "heading": {
+        "en": "The Youth Steering Committee",
+        "bn": "ইয়ুথ স্টিয়ারিং কমিটি"
+      },
+      "body": {
+        "en": "Ten adolescents from Satkhira form the Youth Steering Committee (YSC). They are not the subjects of the stories — those are the women entrepreneurs themselves — but they are the producers, the interviewers, and the first line of editorial review. None of the YSC members appear on this site by name or face. They appear collectively under this project's banner only.",
+        "bn": "সাতক্ষীরার দশজন কিশোর-কিশোরী মিলে গড়ে ওঠে ইয়ুথ স্টিয়ারিং কমিটি (YSC)। তাঁরা গল্পগুলোর বিষয় নন — সে জায়গায় আছেন নারী উদ্যোক্তারা নিজেরা — কিন্তু তাঁরাই প্রযোজক, সাক্ষাৎকার গ্রহণকারী এবং সম্পাদকীয় পর্যালোচনার প্রথম সারি। এই সাইটে YSC-র কোনও সদস্য নাম বা মুখ দিয়ে আসেন না। তাঁরা শুধু এই প্রকল্পের ব্যানারে সম্মিলিতভাবে আসেন।"
+      }
+    },
+    {
+      "heading": {
+        "en": "Why Satkhira",
+        "bn": "কেন সাতক্ষীরা"
+      },
+      "body": {
+        "en": "Satkhira sits at the southwestern edge of Bangladesh, where saline intrusion, climate-amplified weather, and proximity to the Sundarbans shape the rhythms of every micro-enterprise. Women entrepreneurs here run the same kinds of businesses one finds across rural Bangladesh — tailoring, dairy, fish drying, handicraft, organic farming — but the constraints they navigate are sharper, the margins thinner, and the policy literature about them noticeably thinner still. V2V Bridge is one small contribution to that gap.",
+        "bn": "সাতক্ষীরা বাংলাদেশের দক্ষিণ-পশ্চিম প্রান্তে অবস্থিত, যেখানে লবণাক্ততার অনুপ্রবেশ, জলবায়ু-প্রভাবিত আবহাওয়া এবং সুন্দরবনের নৈকট্য — প্রতিটি ক্ষুদ্র উদ্যোগের ছন্দ গড়ে তোলে। এখানকার নারী উদ্যোক্তারা গ্রামীণ বাংলাদেশের অন্যান্য জায়গার মতোই ব্যবসা চালান — দর্জিগিরি, দুগ্ধ, শুঁটকি, হস্তশিল্প, জৈব কৃষি — কিন্তু সীমাবদ্ধতা এখানে আরও ধারালো, মার্জিন আরও পাতলা, এবং তাঁদের সম্পর্কে নীতি সাহিত্য লক্ষণীয়ভাবে আরও কম। V2V Bridge সেই ফাঁকের প্রতি একটি ছোট অবদান।"
+      }
+    },
+    {
+      "heading": {
+        "en": "Credits",
+        "bn": "কৃতজ্ঞতা"
+      },
+      "body": {
+        "en": "Funded by Plan International Bangladesh under the Youth Equality Award 2026. Implemented by CapeC. Consulting (Satkhira & Dhaka). The site is hosted on Vercel and built on Next.js with audio distributed via Spotify for Podcasters.",
+        "bn": "ইয়ুথ ইক্যুয়ালিটি অ্যাওয়ার্ড ২০২৬-এর অধীনে অর্থায়ন করেছে প্ল্যান ইন্টারন্যাশনাল বাংলাদেশ। বাস্তবায়ন করেছে CapeC. কনসালটিং (সাতক্ষীরা ও ঢাকা)। সাইটটি Vercel-এ হোস্ট করা এবং Next.js-এ তৈরি; অডিও বিতরণ করা হয় Spotify for Podcasters-এর মাধ্যমে।"
+      }
+    }
+  ],
+  "metadata": {
+    "title": "About V2V Bridge",
+    "description": "What V2V Bridge is, who runs it, and why we are doing it in Satkhira."
+  }
+}

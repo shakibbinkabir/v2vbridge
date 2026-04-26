@@ -1,0 +1,20 @@
+{
+  "id": "sample-ep03",
+  "episodeNumber": 3,
+  "title": {
+    "en": "Salt, Time, and Storms",
+    "bn": "লবণ, সময়, ঝড়"
+  },
+  "summary": {
+    "en": "Salma's dry-fish racks are within an hour's walk of the Sundarbans. The salt ratios, the curing times, the difference between a good and a spoiled batch — these are knowledge built across women in her line, but largely undocumented. They're also weather. A single unseasonal rain can wipe out weeks of inventory and there is no insurance for any of it. In this episode Salma walks us through her workflow and the points where it breaks. We close with what an honest support model for shutki processing would actually need to look like — not what an outsider thinks it should look like.",
+    "bn": "সালমার শুঁটকির র‍্যাকগুলো সুন্দরবন থেকে ঘণ্টাখানেকের হাঁটার পথে। লবণের অনুপাত, শুকানোর সময়, ভালো ও নষ্ট ব্যাচের তফাত — এই জ্ঞান তাঁর পেশায় নারীদের মধ্যে গড়ে উঠেছে, কিন্তু লেখা নেই কোথাও। এই জ্ঞান আবহাওয়ার সঙ্গেও জড়িত। অসময়ে একটি বৃষ্টি কয়েক সপ্তাহের মজুদ মুছে দিতে পারে, কোনও বীমা নেই। এই পর্বে সালমা তাঁর কাজের প্রবাহ এবং সেটি যেখানে ভেঙে পড়ে সেই বিন্দুগুলো ব্যাখ্যা করেন। শেষ করি একটি সৎ সহায়তা-মডেলকে আসলে কেমন হতে হবে সেই প্রশ্নে — বাইরে থেকে কেমন হওয়া উচিত মনে হয় তা নয়।"
+  },
+  "embed": {
+    "provider": "spotify",
+    "embedId": "6F2oyPuRzOcQzFm2GJoYAT"
+  },
+  "durationSeconds": 1947,
+  "recordedOn": "2026-04-29",
+  "published": false,
+  "entrepreneurId": "sample-002"
+}

@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": { "en": "Home", "bn": "হোম" },
+    "podcasts": { "en": "Podcasts", "bn": "পডকাস্ট" },
+    "entrepreneurs": { "en": "Entrepreneurs", "bn": "উদ্যোক্তা" },
+    "reels": { "en": "Reels", "bn": "রিল" },
+    "about": { "en": "About", "bn": "পরিচিতি" },
+    "resources": { "en": "Resources", "bn": "সম্পদ" }
+  },
+  "footer": {
+    "tagline": {
+      "en": "Voices from women entrepreneurs in Satkhira, on the public record.",
+      "bn": "সাতক্ষীরার নারী উদ্যোক্তাদের কণ্ঠস্বর — জনপরিসরে নথিভুক্ত।"
+    },
+    "aboutHeading": { "en": "Project", "bn": "প্রকল্প" },
+    "listenHeading": { "en": "Listen & watch", "bn": "শুনুন ও দেখুন" },
+    "projectHeading": { "en": "Project info", "bn": "প্রকল্পের তথ্য" },
+    "withdrawLabel": {
+      "en": "Withdraw or change consent",
+      "bn": "সম্মতি প্রত্যাহার বা পরিবর্তন"
+    },
+    "safeguardingLabel": {
+      "en": "Safeguarding policy",
+      "bn": "সুরক্ষা নীতি"
+    },
+    "auditLabel": { "en": "Audit (PIB monitors)", "bn": "অডিট" },
+    "planIbCredit": {
+      "en": "Funded by Plan International Bangladesh — Youth Equality Award 2026",
+      "bn": "অর্থায়ন: প্ল্যান ইন্টারন্যাশনাল বাংলাদেশ — ইয়ুথ ইক্যুয়ালিটি অ্যাওয়ার্ড ২০২৬"
+    },
+    "capecCredit": {
+      "en": "Implemented by CapeC. Consulting",
+      "bn": "বাস্তবায়ন: CapeC. কনসালটিং"
+    },
+    "lastUpdatedLabel": { "en": "Last updated", "bn": "সর্বশেষ হালনাগাদ" },
+    "copyright": {
+      "en": "© 2026 V2V Bridge. Content remains the contributors' to withdraw at any time.",
+      "bn": "© ২০২৬ V2V Bridge। কনটেন্ট অংশগ্রহণকারীদের — যেকোনও সময় প্রত্যাহারযোগ্য।"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="V2V Bridge logo placeholder">
+  <title>V2V Bridge</title>
+  <text
+    x="50"
+    y="58"
+    text-anchor="middle"
+    font-family="Inter, system-ui, sans-serif"
+    font-weight="700"
+    font-size="34"
+    letter-spacing="-1"
+    fill="#0F4C5C"
+  >V2V</text>
+  <line x1="14" y1="78" x2="86" y2="78" stroke="#E76F51" stroke-width="3" stroke-linecap="round" />
+</svg>

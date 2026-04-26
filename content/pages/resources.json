@@ -1,0 +1,56 @@
+{
+  "slug": "resources",
+  "title": {
+    "en": "Resources",
+    "bn": "সম্পদ"
+  },
+  "sections": [
+    {
+      "heading": {
+        "en": "For listeners",
+        "bn": "শ্রোতাদের জন্য"
+      },
+      "body": {
+        "en": "If a story you heard on V2V Bridge made you want to act — donate, mentor, place an order, share — we have collected the most concrete next steps below. We deliberately keep this page short. The point is not to direct traffic anywhere; it is to make sure no one finishes an episode and then doesn't know what to do.",
+        "bn": "V2V Bridge-এ শোনা কোনও গল্প যদি আপনাকে কিছু করতে অনুপ্রাণিত করে — দান, পরামর্শ, অর্ডার, শেয়ার — সবচেয়ে নির্দিষ্ট পরবর্তী পদক্ষেপগুলি নিচে আছে। আমরা ইচ্ছাকৃতভাবে এই পৃষ্ঠাটি ছোট রাখি। কোনও জায়গায় ট্র্যাফিক পাঠানো লক্ষ্য নয়; লক্ষ্য হলো কেউ যেন একটি পর্ব শেষ করে কী করতে হবে তা না জেনে চলে না যান।"
+      }
+    },
+    {
+      "heading": {
+        "en": "For journalists and researchers",
+        "bn": "সাংবাদিক ও গবেষকদের জন্য"
+      },
+      "body": {
+        "en": "Quotations from the audio and written profiles can be used in reporting and research with attribution to V2V Bridge and the entrepreneur's stated display name. Please do not infer or guess at the entrepreneur's full name, location, or family situation; we have deliberately not published those details. For interview requests, contact the project lead via the address on the /withdraw page.",
+        "bn": "অডিও এবং লিখিত প্রোফাইল থেকে উদ্ধৃতিগুলি — V2V Bridge এবং উদ্যোক্তার বলা প্রদর্শন-নাম উল্লেখ করে — প্রতিবেদন ও গবেষণায় ব্যবহার করা যেতে পারে। দয়া করে উদ্যোক্তার পূর্ণ নাম, অবস্থান, বা পারিবারিক পরিস্থিতি অনুমান করবেন না; আমরা ইচ্ছাকৃতভাবে সেই বিশদ প্রকাশ করিনি। সাক্ষাৎকারের অনুরোধের জন্য /withdraw পৃষ্ঠার ঠিকানায় প্রকল্প-প্রধানের সঙ্গে যোগাযোগ করুন।"
+      }
+    },
+    {
+      "heading": {
+        "en": "Final learning brief",
+        "bn": "চূড়ান্ত শিক্ষা সংক্ষেপ"
+      },
+      "body": {
+        "en": "At the end of the project we publish a short learning brief — not a research paper — synthesising the patterns the YSC team noticed across the ten profiles. Once it is ready you will find a download link in this section. Until then the placeholder reads \"Available June 2026 / জুন ২০২৬-এ উপলব্ধ\".",
+        "bn": "প্রকল্পের শেষে আমরা একটি ছোট শিক্ষা-সংক্ষেপ প্রকাশ করি — গবেষণা-পত্র নয় — যেখানে দশটি প্রোফাইল জুড়ে YSC দল লক্ষ্য করা প্যাটার্নগুলি একত্র করা হয়। এটি প্রস্তুত হলে এই অনুচ্ছেদে একটি ডাউনলোড লিঙ্ক পাবেন। তত দিন প্লেসহোল্ডার পড়বে \"Available June 2026 / জুন ২০২৬-এ উপলব্ধ\"।"
+      }
+    },
+    {
+      "heading": {
+        "en": "Frameworks the project drew from",
+        "bn": "প্রকল্পটি যেসব কাঠামো থেকে নিয়েছে"
+      },
+      "body": {
+        "en": "Plan International's safeguarding framework for child and adolescent protection in media projects; CapeC. Consulting's youth-led research methodology used previously on Boithok Khana; and the standard Spotify for Podcasters distribution policies. Citations and links will be added to the final learning brief in June 2026.",
+        "bn": "মিডিয়া প্রকল্পে শিশু ও কিশোর সুরক্ষার জন্য প্ল্যান ইন্টারন্যাশনালের সুরক্ষা কাঠামো; CapeC. কনসালটিং-এর যুব-নেতৃত্বাধীন গবেষণা পদ্ধতি, যা পূর্বে Boithok Khana-তে ব্যবহৃত হয়েছিল; এবং Spotify for Podcasters-এর মান বিতরণ নীতি। উদ্ধৃতি ও লিঙ্কগুলি জুন ২০২৬-এর চূড়ান্ত শিক্ষা সংক্ষেপে যুক্ত হবে।"
+      }
+    }
+  ],
+  "metadata": {
+    "title": "Resources | V2V Bridge",
+    "description": "What to do after listening, how to cite the project responsibly, and where to find the final learning brief when it lands."
+  },
+  "flags": {
+    "learningBriefAvailable": false
+  }
+}

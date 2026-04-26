@@ -1,0 +1,21 @@
+{
+  "id": "sample-003",
+  "displayName": "Munira",
+  "sector": "dairy",
+  "district": "Satkhira",
+  "photo": "/sample-photos/sample-003.svg",
+  "photoConsent": true,
+  "summary": {
+    "en": "Munira keeps four cows on a half-bigha plot at the edge of her village. She sells fresh milk door-to-door before sunrise and supplies a sweet shop in the bazaar with the surplus. After joining a women's savings group two years ago she added a small chiller, which doubled the keeping time of her milk and let her absorb the days when buyers cancel late. She is unusual in her area for handling all aspects of the work — feeding, milking, hoof care, accounting — without male intermediaries. Her V2V episode looks at what changes when a woman owns the entire production chain rather than only one step of it. (Sample placeholder — replace with real consented profile before launch.)",
+    "bn": "মুনিরা গ্রামের প্রান্তে আধা বিঘা জমিতে চারটি গরু পালেন। তিনি সূর্য ওঠার আগে দরজায় দরজায় তাজা দুধ বিক্রি করেন, এবং বাজারের একটি মিষ্টির দোকানে অতিরিক্ত দুধ সরবরাহ করেন। দুই বছর আগে একটি নারী সঞ্চয়ী দলে যোগ দিয়ে তিনি একটি ছোট চিলার যোগ করেছেন, যা দুধের রাখার সময় দ্বিগুণ করেছে এবং ক্রেতা শেষ মুহূর্তে বাতিল করলে ক্ষতি সামলে নিতে দেয়। তাঁর এলাকায় তিনি অস্বাভাবিক — কাজের প্রতিটি দিক, খাওয়ানো থেকে দোহন, খুর-পরিচর্যা থেকে হিসাব পর্যন্ত, পুরুষ মধ্যস্থ ছাড়াই করেন। তাঁর V2V পর্বটি দেখে — যখন একজন নারী পুরো উৎপাদন শৃঙ্খল নিজেই চালান, কেবল একটি ধাপ নয়, তখন কী বদলায়। (নমুনা — চূড়ান্ত প্রকাশের আগে প্রতিস্থাপন করতে হবে।)"
+  },
+  "podcastId": "sample-ep02",
+  "reelIds": ["sample-r04"],
+  "consentFormFilename": "sample-003_consent.pdf",
+  "published": false,
+  "reviewers": {
+    "ysc1": "PLACEHOLDER — YSC reviewer 1",
+    "ysc2": "PLACEHOLDER — YSC reviewer 2",
+    "projectLead": "PLACEHOLDER — Project Lead"
+  }
+}

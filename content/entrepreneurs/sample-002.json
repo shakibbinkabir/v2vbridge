@@ -1,0 +1,19 @@
+{
+  "id": "sample-002",
+  "displayName": "Salma",
+  "sector": "fish drying",
+  "district": "Satkhira",
+  "photoConsent": false,
+  "summary": {
+    "en": "Salma works the dry-fish racks on the southern fringe of Satkhira, processing seasonal catch into shutki for traders who supply markets in Khulna and Dhaka. The work is intensely physical and weather-dependent: a single unexpected rain can spoil weeks of inventory. Salma manages a rotating crew of six women, all paid by weight rather than by day, which makes income predictable in good seasons and brutal in poor ones. She wants V2V Bridge listeners to understand both the skill of the craft — the salt ratios, the curing times, the smell of a properly dried catch — and the absence of any safety net when storms collapse a season. (Sample placeholder — replace with real consented profile before launch.)",
+    "bn": "সালমা সাতক্ষীরার দক্ষিণ প্রান্তে শুঁটকির র‍্যাকে কাজ করেন, মৌসুমি মাছকে শুঁটকিতে রূপান্তর করেন, যা ব্যাপারীরা খুলনা ও ঢাকার বাজারে নিয়ে যান। কাজটি কঠোর শারীরিক ও আবহাওয়া-নির্ভর: একটি অপ্রত্যাশিত বৃষ্টি কয়েক সপ্তাহের মজুদ নষ্ট করতে পারে। সালমা ছয়জন নারীর একটি দল পরিচালনা করেন, যাঁদের মজুরি ওজন অনুযায়ী, দিন অনুযায়ী নয় — ভালো মৌসুমে আয় অনুমেয়, খারাপ মৌসুমে নির্মম। তিনি চান V2V Bridge-এর শ্রোতারা পেশার দক্ষতা — লবণের অনুপাত, শুকানোর সময়, ভালোভাবে শুকানো মাছের গন্ধ — বোঝেন, এবং বুঝুন যে ঝড় যখন একটি মৌসুম ভেঙে দেয় তখন কোনও নিরাপত্তা জাল নেই। (নমুনা — চূড়ান্ত প্রকাশের আগে প্রতিস্থাপন করতে হবে।)"
+  },
+  "reelIds": ["sample-r03"],
+  "consentFormFilename": "sample-002_consent.pdf",
+  "published": false,
+  "reviewers": {
+    "ysc1": "PLACEHOLDER — YSC reviewer 1",
+    "ysc2": "PLACEHOLDER — YSC reviewer 2",
+    "projectLead": "PLACEHOLDER — Project Lead"
+  }
+}

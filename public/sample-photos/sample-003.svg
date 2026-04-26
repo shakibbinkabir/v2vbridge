@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Abstract sample portrait placeholder">
+  <title>Abstract sample portrait placeholder</title>
+  <rect width="400" height="300" fill="#F4F1ED" />
+  <rect x="100" y="60" width="200" height="180" rx="14" fill="none" stroke="#0F4C5C" stroke-width="3" />
+  <circle cx="200" cy="120" r="40" fill="none" stroke="#E76F51" stroke-width="3" />
+  <path d="M150 200 Q200 170 250 200" fill="none" stroke="#0F4C5C" stroke-width="3" />
+  <text x="200" y="290" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#555">SAMPLE — REPLACE WITH CONSENTED PORTRAIT</text>
+</svg>

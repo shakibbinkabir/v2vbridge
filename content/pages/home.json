@@ -1,0 +1,43 @@
+{
+  "slug": "home",
+  "title": {
+    "en": "V2V Bridge — voices from women entrepreneurs in Satkhira",
+    "bn": "V2V Bridge — সাতক্ষীরার নারী উদ্যোক্তাদের কণ্ঠস্বর"
+  },
+  "sections": [
+    {
+      "heading": {
+        "en": "Why this site exists",
+        "bn": "কেন এই সাইট"
+      },
+      "body": {
+        "en": "V2V Bridge is a 3-month youth-led storytelling project under Plan International Bangladesh's Youth Equality Award 2026, implemented by CapeC. Consulting in Satkhira and Dhaka. The point isn't to celebrate ten women in isolation; it is to put their actual day-to-day work — and the gaps that constrain it — in front of an audience that has the means to act on what they hear.",
+        "bn": "V2V Bridge হলো প্ল্যান ইন্টারন্যাশনাল বাংলাদেশের ইয়ুথ ইক্যুয়ালিটি অ্যাওয়ার্ড ২০২৬-এর অধীনে CapeC. কনসালটিং কর্তৃক সাতক্ষীরা ও ঢাকায় বাস্তবায়িত একটি তিন মাসের যুব-নেতৃত্বাধীন গল্প-বলার প্রকল্প। এর লক্ষ্য দশজন নারীকে বিচ্ছিন্নভাবে উদযাপন করা নয়; বরং তাঁদের প্রকৃত দৈনন্দিন কাজ এবং তা যে ফাঁকগুলো দ্বারা সীমাবদ্ধ — সেগুলো এমন এক শ্রোতার সামনে রাখা যাঁদের তা শুনে কিছু করার সামর্থ্য আছে।"
+      }
+    },
+    {
+      "heading": {
+        "en": "What you'll find here",
+        "bn": "আপনি যা পাবেন"
+      },
+      "body": {
+        "en": "Long-form audio episodes recorded with each entrepreneur, short reels that show the actual work, and written profiles in both Bangla and English. Everything published goes through a two-reviewer YSC process and a project-lead signoff. Nothing is published without a signed Media Consent Form on file.",
+        "bn": "প্রতিটি উদ্যোক্তার সঙ্গে রেকর্ড করা দীর্ঘ অডিও পর্ব, প্রকৃত কাজ দেখানো ছোট রিল, এবং বাংলা ও ইংরেজি — দু'টি ভাষায় লেখা প্রোফাইল। প্রকাশিত যা কিছু — দু'জন YSC পর্যালোচক এবং প্রকল্প-প্রধানের অনুমোদনের মধ্য দিয়ে যায়। স্বাক্ষরিত মিডিয়া সম্মতি ফর্ম ছাড়া কিছুই প্রকাশ করা হয় না।"
+      }
+    },
+    {
+      "heading": {
+        "en": "How to listen",
+        "bn": "কীভাবে শুনবেন"
+      },
+      "body": {
+        "en": "Episodes are hosted on Spotify and embedded directly in each entrepreneur's profile. You can also follow the V2V Bridge show on Spotify if you'd rather listen in your usual podcast app. The reels live on Instagram, TikTok, and Facebook — you don't need accounts on those platforms to watch.",
+        "bn": "পর্বগুলি Spotify-তে হোস্ট করা এবং প্রতিটি উদ্যোক্তার প্রোফাইলে সরাসরি এমবেড করা। চাইলে আপনার পছন্দের পডকাস্ট অ্যাপে শুনতে V2V Bridge শোটি Spotify-তে ফলো করতে পারেন। রিলগুলি Instagram, TikTok এবং Facebook-এ থাকে — দেখার জন্য অ্যাকাউন্ট লাগে না।"
+      }
+    }
+  ],
+  "metadata": {
+    "title": "V2V Bridge — voices from women entrepreneurs in Satkhira",
+    "description": "A youth-led storytelling project amplifying the voices, work, and policy gaps of women entrepreneurs in Satkhira."
+  }
+}

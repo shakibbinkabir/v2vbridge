@@ -1,0 +1,53 @@
+{
+  "slug": "safeguarding",
+  "title": {
+    "en": "Safeguarding",
+    "bn": "সুরক্ষা ব্যবস্থা"
+  },
+  "sections": [
+    {
+      "heading": {
+        "en": "What we do not publish",
+        "bn": "আমরা যা প্রকাশ করি না"
+      },
+      "body": {
+        "en": "V2V Bridge does not publish identifiable photos of any minor, ever. It does not publish the personal contact details of any contributor. It does not publish location information below district level — only \"Satkhira\" appears on profiles, never a thana, ward, or household. Photos of adult entrepreneurs appear only when the entrepreneur has signed a Media Consent Form that explicitly opts in to photo use.",
+        "bn": "V2V Bridge কখনও কোনও অপ্রাপ্তবয়স্কের চেনা যায় এমন ছবি প্রকাশ করে না। কোনও অংশগ্রহণকারীর ব্যক্তিগত যোগাযোগের তথ্য প্রকাশ করে না। জেলার নিচে কোনও স্থানের তথ্য প্রকাশ করে না — প্রোফাইলে শুধু \"সাতক্ষীরা\" আসে; কোনও থানা, ওয়ার্ড বা পরিবারের তথ্য নয়। প্রাপ্তবয়স্ক উদ্যোক্তার ছবি শুধু তখনই আসে যখন তিনি ছবি ব্যবহারের জন্য স্পষ্টভাবে সম্মতি দিয়ে একটি মিডিয়া সম্মতি ফর্ম স্বাক্ষর করেছেন।"
+      }
+    },
+    {
+      "heading": {
+        "en": "How review works",
+        "bn": "পর্যালোচনা কীভাবে কাজ করে"
+      },
+      "body": {
+        "en": "Every published item — profile, podcast episode, reel — passes a three-step review: two YSC reviewers read or watch, then the project lead signs off. Each entrepreneur's signed consent form is filed in the project's secure Drive folder, and its filename is recorded next to the published record. The /audit page lists every published item with its review state for Plan International Bangladesh monitors.",
+        "bn": "প্রতিটি প্রকাশিত উপাদান — প্রোফাইল, পডকাস্ট পর্ব, রিল — তিন-ধাপের পর্যালোচনার মধ্য দিয়ে যায়: প্রথমে দু'জন YSC পর্যালোচক, তারপর প্রকল্প-প্রধানের অনুমোদন। প্রত্যেক উদ্যোক্তার স্বাক্ষরিত সম্মতি ফর্ম প্রকল্পের সুরক্ষিত ড্রাইভ ফোল্ডারে সংরক্ষিত থাকে, এবং প্রকাশিত রেকর্ডের পাশে তার ফাইল-নাম নথিভুক্ত করা হয়। প্ল্যান ইন্টারন্যাশনাল বাংলাদেশের মনিটরদের জন্য /audit পৃষ্ঠায় প্রতিটি প্রকাশিত উপাদান এবং তার পর্যালোচনার অবস্থা তালিকাভুক্ত আছে।"
+      }
+    },
+    {
+      "heading": {
+        "en": "Withdrawal",
+        "bn": "প্রত্যাহার"
+      },
+      "body": {
+        "en": "Any contributor can ask, at any time, that we remove their profile, episode, or reel. We will do so within seven days of confirming the request. We cannot recover already-distributed copies on listeners' devices, but we can stop the original from being available on this site and on Spotify. See the /withdraw page for how to start that process.",
+        "bn": "যেকোনও অংশগ্রহণকারী যেকোনও সময় তাঁর প্রোফাইল, পর্ব বা রিল সরিয়ে নিতে বলতে পারেন। অনুরোধটি যাচাইয়ের সাত দিনের মধ্যে আমরা তা করব। শ্রোতার ডিভাইসে ইতিমধ্যে বিতরিত কপি আমরা ফিরিয়ে আনতে পারি না, কিন্তু এই সাইটে এবং Spotify-তে মূলটি পাওয়া বন্ধ করা যায়। সেই প্রক্রিয়া কীভাবে শুরু করবেন — দেখুন /withdraw পৃষ্ঠা।"
+      }
+    },
+    {
+      "heading": {
+        "en": "Report a concern",
+        "bn": "উদ্বেগ জানান"
+      },
+      "body": {
+        "en": "If you see anything on this site that you believe violates the safeguarding policy above, please contact the Plan International Bangladesh focal point listed on the /withdraw page. Concerns are reviewed by the project lead within two working days; the relevant content is taken offline within twenty-four hours of the initial report while review is in progress.",
+        "bn": "এই সাইটে এমন কিছু দেখলে যা উপরের সুরক্ষা নীতি লঙ্ঘন করছে বলে মনে হয়, দয়া করে /withdraw পৃষ্ঠায় উল্লেখিত প্ল্যান ইন্টারন্যাশনাল বাংলাদেশের ফোকাল পয়েন্টের সঙ্গে যোগাযোগ করুন। উদ্বেগগুলি দু'টি কর্মদিবসের মধ্যে প্রকল্প-প্রধান পর্যালোচনা করেন; পর্যালোচনা চলাকালে প্রাথমিক প্রতিবেদনের চব্বিশ ঘণ্টার মধ্যে সংশ্লিষ্ট উপাদান অফলাইনে নেওয়া হয়।"
+      }
+    }
+  ],
+  "metadata": {
+    "title": "Safeguarding | V2V Bridge",
+    "description": "How V2V Bridge protects entrepreneurs and adolescents — what we publish, how reviews work, and how to raise a concern."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "sample-005",
+  "displayName": "Ayesha",
+  "sector": "organic farming",
+  "district": "Satkhira",
+  "photoConsent": false,
+  "summary": {
+    "en": "Ayesha grows organic vegetables on a one-bigha plot reclaimed from saline-affected land — a slow rebuilding of the soil with green manure and compost from her own kitchen. Three years in, she sells a weekly basket subscription to thirty households in town, taking orders by phone and delivering on the back of her brother's bicycle. She refuses chemical inputs even when her neighbours' yields visibly outpace hers, and is articulate about why: the cost of synthetic fertilisers, the longer-term degradation, the safer food her children eat. Her V2V Bridge story is partly an economics story, partly a quiet argument about what Satkhira's coastal soils can become when they are not pushed for one more harvest. (Sample placeholder — replace with real consented profile before launch.)",
+    "bn": "আয়েশা লবণাক্ত জমি থেকে পুনরুদ্ধারিত এক বিঘা জমিতে জৈব সবজি চাষ করেন — সবুজ সার ও তাঁর নিজের রান্নাঘরের কম্পোস্ট দিয়ে ধীরে ধীরে মাটি পুনর্নির্মাণ। তিন বছর পরে তিনি শহরের ত্রিশটি পরিবারে সাপ্তাহিক ঝুড়ির সাবস্ক্রিপশন বিক্রি করেন, ফোনে অর্ডার নেন এবং ভাইয়ের সাইকেলের পেছনে পৌঁছে দেন। প্রতিবেশীদের ফলন দৃশ্যত বেশি হলেও তিনি রাসায়নিক উপকরণ প্রত্যাখ্যান করেন, এবং কেন তা স্পষ্টভাবে বলতে পারেন: কৃত্রিম সারের খরচ, দীর্ঘমেয়াদি ক্ষতি, সন্তানদের জন্য নিরাপদ খাবার। তাঁর V2V Bridge গল্পটি আংশিক অর্থনীতির গল্প, আংশিক একটি শান্ত যুক্তি — সাতক্ষীরার উপকূলীয় মাটি কী হতে পারে যদি প্রতিটি ফসলের জন্য না ঠেলা হয়। (নমুনা — চূড়ান্ত প্রকাশের আগে প্রতিস্থাপন করতে হবে।)"
+  },
+  "reelIds": ["sample-r06"],
+  "consentFormFilename": "sample-005_consent.pdf",
+  "published": false,
+  "reviewers": {
+    "ysc1": "PLACEHOLDER — YSC reviewer 1",
+    "ysc2": "PLACEHOLDER — YSC reviewer 2",
+    "projectLead": "PLACEHOLDER — Project Lead"
+  }
+}

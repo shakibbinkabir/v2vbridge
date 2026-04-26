@@ -1,0 +1,53 @@
+{
+  "slug": "withdraw",
+  "title": {
+    "en": "Withdraw or change consent",
+    "bn": "সম্মতি প্রত্যাহার বা পরিবর্তন"
+  },
+  "sections": [
+    {
+      "heading": {
+        "en": "Your right to withdraw",
+        "bn": "আপনার প্রত্যাহারের অধিকার"
+      },
+      "body": {
+        "en": "If you contributed to V2V Bridge, you can ask us to remove or change anything we published about you, at any time, without giving a reason. This includes the written profile, the podcast episode, and any reels. The Media Consent Form you signed says this, and it remains true after the project ends.",
+        "bn": "আপনি যদি V2V Bridge-এ অবদান রেখে থাকেন, তবে আপনি যেকোনও সময়, কোনও কারণ না দিয়েই, আমাদের কাছ থেকে আপনার সম্পর্কে প্রকাশিত যেকোনও কিছু অপসারণ বা পরিবর্তনের অনুরোধ করতে পারেন। লিখিত প্রোফাইল, পডকাস্ট পর্ব এবং যেকোনও রিল — সবই এর অন্তর্ভুক্ত। আপনি যে মিডিয়া সম্মতি ফর্মে স্বাক্ষর করেছিলেন — সেখানে এটি লেখা আছে, এবং প্রকল্প শেষ হওয়ার পরেও এটি সত্য থাকে।"
+      }
+    },
+    {
+      "heading": {
+        "en": "How to ask",
+        "bn": "কীভাবে অনুরোধ করবেন"
+      },
+      "body": {
+        "en": "Contact the Plan International Bangladesh focal point for V2V Bridge. TODO: replace with confirmed PIB contact (name, phone, email). You can ask in person, by phone, or in writing — whichever you find easier. We do not require a signed letter; a clear request is enough. We will read it back to you to make sure we understood, and act within seven days.",
+        "bn": "V2V Bridge-এর জন্য প্ল্যান ইন্টারন্যাশনাল বাংলাদেশের ফোকাল পয়েন্টের সঙ্গে যোগাযোগ করুন। TODO: নিশ্চিতকৃত PIB যোগাযোগ (নাম, ফোন, ইমেইল) দিয়ে প্রতিস্থাপন করতে হবে। আপনি সরাসরি দেখা করে, ফোনে, বা লিখিতভাবে — যেভাবে আপনার সুবিধা — অনুরোধ করতে পারেন। আমরা স্বাক্ষরিত চিঠি চাই না; স্পষ্ট অনুরোধই যথেষ্ট। আমরা আপনাকে পড়ে শোনাব যাতে আমরা সঠিকভাবে বুঝেছি, এবং সাত দিনের মধ্যে ব্যবস্থা নেব।"
+      }
+    },
+    {
+      "heading": {
+        "en": "What we can and cannot recover",
+        "bn": "আমরা কী ফেরাতে পারি এবং কী পারি না"
+      },
+      "body": {
+        "en": "We can stop the content from being available on this site and on Spotify, and we can remove reels from the V2V Bridge social pages. We cannot retrieve copies that listeners or viewers have already saved to their devices, and we cannot delete copies that other people have downloaded and re-shared. This is true of any project that publishes online; we say so plainly so you can decide with full information.",
+        "bn": "আমরা এই সাইটে এবং Spotify-তে কনটেন্ট পাওয়া বন্ধ করতে পারি, এবং V2V Bridge-এর সামাজিক পৃষ্ঠা থেকে রিল সরাতে পারি। শ্রোতা বা দর্শকরা ইতিমধ্যে যে কপি তাঁদের ডিভাইসে সংরক্ষণ করেছেন তা আমরা পুনরুদ্ধার করতে পারি না, এবং অন্যেরা ডাউনলোড করে পুনরায় শেয়ার করেছেন এমন কপি মুছে ফেলতে পারি না। অনলাইনে প্রকাশ করা যেকোনও প্রকল্পের ক্ষেত্রে এটি সত্য; আপনি যাতে পূর্ণ তথ্যসহ সিদ্ধান্ত নিতে পারেন সেজন্য আমরা স্পষ্টভাবে বলছি।"
+      }
+    },
+    {
+      "heading": {
+        "en": "Changing — not removing",
+        "bn": "পরিবর্তন — অপসারণ নয়"
+      },
+      "body": {
+        "en": "If you want to keep the content but change something — a name, a sector label, a part of the summary, the way you appear in a reel — please ask. Changes are simpler than full removal and can usually be made in two to three working days.",
+        "bn": "আপনি যদি কনটেন্টটি রাখতে চান কিন্তু কিছু পরিবর্তন করতে চান — একটি নাম, পেশা-লেবেল, সারাংশের অংশ, রিলে আপনার উপস্থিতির ধরন — দয়া করে জানান। পরিবর্তন সম্পূর্ণ অপসারণের চেয়ে সহজ এবং সাধারণত দু'-তিন কর্মদিবসে করা যায়।"
+      }
+    }
+  ],
+  "metadata": {
+    "title": "Withdraw or change consent | V2V Bridge",
+    "description": "How any contributor can ask V2V Bridge to remove or change content about them — and what the project can and cannot recover."
+  }
+}

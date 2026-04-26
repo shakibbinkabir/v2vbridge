@@ -1,0 +1,21 @@
+{
+  "id": "sample-001",
+  "displayName": "Rina",
+  "sector": "tailoring",
+  "district": "Satkhira",
+  "photo": "/sample-photos/sample-001.svg",
+  "photoConsent": true,
+  "summary": {
+    "en": "Rina runs a small tailoring atelier from a single-room home workshop, stitching school uniforms, blouses, and salwar kameez for neighbours and the weekly haat. She trained under her mother and now mentors three younger apprentices from her own community. Most of her income goes back into the business — fabric on credit, a second sewing machine, electricity for evening shifts when the children are asleep. She speaks about wanting to register her workshop and take on government school orders, but says formal paperwork is the part she finds most opaque. Her story for V2V Bridge is about the gap between informal mastery and the bureaucratic ladders that determine which businesses get to grow. (Sample placeholder — replace with real consented profile before launch.)",
+    "bn": "রিনা বাড়ির এক কামরার একটি ছোট টেইলারিং কর্মশালা চালান, যেখানে তিনি স্কুলের ইউনিফর্ম, ব্লাউজ এবং সালোয়ার-কামিজ সেলাই করেন প্রতিবেশী ও সাপ্তাহিক হাটের জন্য। মায়ের কাছে কাজ শিখেছেন, এখন নিজেই তিনজন তরুণ শিক্ষানবিশকে শেখান। তাঁর আয় বেশিরভাগই ব্যবসায় ফেরত যায় — বাকিতে কাপড়, দ্বিতীয় সেলাই মেশিন, সন্ধ্যার শিফটের জন্য বিদ্যুৎ। তিনি বলেন কর্মশালা নিবন্ধন করতে চান, সরকারি স্কুল অর্ডার নিতে চান, কিন্তু আনুষ্ঠানিক কাগজপত্রের অংশটি তাঁর কাছে সবচেয়ে অস্বচ্ছ। V2V Bridge-এ তাঁর গল্প অনানুষ্ঠানিক দক্ষতা ও সরকারি সিঁড়ির মধ্যে ফাঁকটির — কোন ব্যবসা বড় হবে তা যে সিঁড়ি ঠিক করে দেয়। (নমুনা — চূড়ান্ত প্রকাশের আগে বাস্তব সম্মতিপ্রাপ্ত প্রোফাইল দিয়ে প্রতিস্থাপন করতে হবে।)"
+  },
+  "podcastId": "sample-ep01",
+  "reelIds": ["sample-r01", "sample-r02"],
+  "consentFormFilename": "sample-001_consent.pdf",
+  "published": false,
+  "reviewers": {
+    "ysc1": "PLACEHOLDER — YSC reviewer 1",
+    "ysc2": "PLACEHOLDER — YSC reviewer 2",
+    "projectLead": "PLACEHOLDER — Project Lead"
+  }
+}

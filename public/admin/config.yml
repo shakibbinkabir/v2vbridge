@@ -1,0 +1,488 @@
+backend:
+  name: github
+  repo: shakibbinkabir/v2v
+  branch: integration-v1
+  # The OAuth proxy that exchanges GitHub's OAuth code for an access token.
+  # Replace with your deployed proxy URL. See ADMIN_SETUP.md.
+  base_url: https://CHANGE-ME.vercel.app
+  auth_endpoint: api/auth
+
+# Direct-commit mode: each save commits straight to the configured branch.
+# Switch to editorial workflow later by uncommenting the next line — that
+# turns every save into a draft PR for YSC + project lead review.
+# publish_mode: editorial_workflow
+
+site_url: https://v2vbridge.capec.consulting
+display_url: https://v2vbridge.capec.consulting
+logo_url: /logo-placeholder.svg
+
+media_folder: public/uploads
+public_folder: /uploads
+
+locale: en
+
+collections:
+  - name: entrepreneurs
+    label: Entrepreneurs
+    label_singular: Entrepreneur
+    folder: content/entrepreneurs
+    extension: json
+    format: json
+    create: true
+    delete: true
+    slug: "{{fields.id}}"
+    identifier_field: displayName
+    summary: "{{displayName}} — {{sector}} ({{#if published}}published{{else}}draft{{/if}})"
+    sortable_fields: [publishedAt, displayName, sector]
+    fields:
+      - { name: id, label: "ID (filename slug, lowercase, no spaces)", widget: string, hint: "Must match filename, e.g. 'rina-001'. Cannot change after creation." }
+      - { name: displayName, label: Display name, widget: string }
+      - name: sector
+        label: Sector
+        widget: select
+        options: [tailoring, dairy, fish drying, handicraft, organic farming]
+        create: true
+      - { name: district, label: District, widget: string, default: Satkhira }
+      - { name: photo, label: Portrait photo, widget: image, required: false, hint: "Only show if photo consent is granted." }
+      - { name: photoConsent, label: Photo consent on file?, widget: boolean, default: false, hint: "Tick only if a signed Media Consent Form authorises showing the portrait." }
+      - name: summary
+        label: Summary
+        widget: object
+        fields:
+          - { name: en, label: English, widget: text }
+          - { name: bn, label: Bangla, widget: text }
+      - name: podcastId
+        label: Linked podcast episode
+        widget: relation
+        collection: podcasts
+        search_fields: [id, "title.en"]
+        value_field: id
+        display_fields: ["title.en"]
+        required: false
+      - name: reelIds
+        label: Linked reels
+        widget: relation
+        collection: reels
+        search_fields: [id, "caption.en"]
+        value_field: id
+        display_fields: ["caption.en"]
+        multiple: true
+        required: false
+      - { name: consentFormFilename, label: Consent form filename, widget: string, hint: "PDF kept off-site (e.g. 'rina-001_consent.pdf'). Filename only — do not upload PDFs to the public site." }
+      - { name: publishedAt, label: Published at, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true, required: false }
+      - { name: published, label: Published, widget: boolean, default: false, hint: "Untick to keep this profile in draft. Only published profiles appear on the live site." }
+      - name: reviewers
+        label: Reviewers
+        widget: object
+        fields:
+          - { name: ysc1, label: YSC reviewer 1, widget: string }
+          - { name: ysc2, label: YSC reviewer 2, widget: string }
+          - { name: projectLead, label: Project lead, widget: string }
+
+  - name: podcasts
+    label: Podcasts
+    label_singular: Podcast episode
+    folder: content/podcasts
+    extension: json
+    format: json
+    create: true
+    delete: true
+    slug: "{{fields.id}}"
+    identifier_field: id
+    summary: "Ep {{episodeNumber}} — {{title.en}}"
+    sortable_fields: [episodeNumber, recordedOn, publishedAt]
+    fields:
+      - { name: id, label: "ID (filename slug)", widget: string, hint: "e.g. 'ep01'. Cannot change after creation." }
+      - { name: episodeNumber, label: Episode number, widget: number, value_type: int, min: 1 }
+      - name: title
+        label: Title
+        widget: object
+        fields:
+          - { name: en, label: English, widget: string }
+          - { name: bn, label: Bangla, widget: string }
+      - name: summary
+        label: Summary
+        widget: object
+        fields:
+          - { name: en, label: English, widget: text }
+          - { name: bn, label: Bangla, widget: text }
+      - name: embed
+        label: Audio embed
+        widget: object
+        fields:
+          - name: provider
+            label: Provider
+            widget: select
+            options: [spotify, anchor, youtube]
+            default: spotify
+          - { name: embedId, label: Embed ID, widget: string, hint: "Spotify episode ID (e.g. '5MVprRq9...'). For Anchor/YouTube use the full episode/video ID." }
+      - { name: durationSeconds, label: Duration (seconds), widget: number, value_type: int, min: 0 }
+      - { name: recordedOn, label: Recorded on, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - { name: publishedAt, label: Published at, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true, required: false }
+      - { name: published, label: Published, widget: boolean, default: false }
+      - name: entrepreneurId
+        label: Featured entrepreneur
+        widget: relation
+        collection: entrepreneurs
+        search_fields: [id, displayName]
+        value_field: id
+        display_fields: [displayName]
+      - { name: transcriptUrl, label: Transcript URL, widget: string, required: false, hint: "Optional link to a hosted transcript." }
+
+  - name: reels
+    label: Reels
+    label_singular: Reel
+    folder: content/reels
+    extension: json
+    format: json
+    create: true
+    delete: true
+    slug: "{{fields.id}}"
+    identifier_field: id
+    summary: "{{platform}} — {{caption.en}}"
+    sortable_fields: [publishedAt, platform]
+    fields:
+      - { name: id, label: "ID (filename slug)", widget: string }
+      - name: platform
+        label: Platform
+        widget: select
+        options: [instagram, tiktok, facebook]
+      - { name: embedUrl, label: Embed URL, widget: string, hint: "Full URL of the reel post on the platform." }
+      - name: caption
+        label: Caption
+        widget: object
+        fields:
+          - { name: en, label: English, widget: text }
+          - { name: bn, label: Bangla, widget: text }
+      - name: entrepreneurId
+        label: Featured entrepreneur
+        widget: relation
+        collection: entrepreneurs
+        search_fields: [id, displayName]
+        value_field: id
+        display_fields: [displayName]
+      - name: podcastId
+        label: Related podcast (optional)
+        widget: relation
+        collection: podcasts
+        search_fields: [id, "title.en"]
+        value_field: id
+        display_fields: ["title.en"]
+        required: false
+      - { name: publishedAt, label: Published at, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true, required: false }
+      - { name: published, label: Published, widget: boolean, default: false }
+
+  - name: pages
+    label: Pages
+    label_singular: Page
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: home
+        label: Home
+        file: content/pages/home.json
+        format: json
+        fields:
+          - { name: slug, label: Slug, widget: hidden, default: home }
+          - name: title
+            label: Page title
+            widget: object
+            fields:
+              - { name: en, label: English, widget: string }
+              - { name: bn, label: Bangla, widget: string }
+          - name: sections
+            label: Sections
+            widget: list
+            fields:
+              - name: heading
+                label: Heading
+                widget: object
+                required: false
+                fields:
+                  - { name: en, label: English, widget: string, required: false }
+                  - { name: bn, label: Bangla, widget: string, required: false }
+              - name: body
+                label: Body
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: text }
+                  - { name: bn, label: Bangla, widget: text }
+          - name: metadata
+            label: SEO metadata
+            widget: object
+            fields:
+              - { name: title, label: Browser tab title, widget: string }
+              - { name: description, label: Meta description, widget: text }
+
+      - name: about
+        label: About
+        file: content/pages/about.json
+        format: json
+        fields:
+          - { name: slug, label: Slug, widget: hidden, default: about }
+          - name: title
+            label: Page title
+            widget: object
+            fields:
+              - { name: en, label: English, widget: string }
+              - { name: bn, label: Bangla, widget: string }
+          - name: sections
+            label: Sections
+            widget: list
+            fields:
+              - name: heading
+                label: Heading
+                widget: object
+                required: false
+                fields:
+                  - { name: en, label: English, widget: string, required: false }
+                  - { name: bn, label: Bangla, widget: string, required: false }
+              - name: body
+                label: Body
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: text }
+                  - { name: bn, label: Bangla, widget: text }
+          - name: metadata
+            label: SEO metadata
+            widget: object
+            fields:
+              - { name: title, label: Browser tab title, widget: string }
+              - { name: description, label: Meta description, widget: text }
+
+      - name: safeguarding
+        label: Safeguarding
+        file: content/pages/safeguarding.json
+        format: json
+        fields:
+          - { name: slug, label: Slug, widget: hidden, default: safeguarding }
+          - name: title
+            label: Page title
+            widget: object
+            fields:
+              - { name: en, label: English, widget: string }
+              - { name: bn, label: Bangla, widget: string }
+          - name: sections
+            label: Sections
+            widget: list
+            fields:
+              - name: heading
+                label: Heading
+                widget: object
+                required: false
+                fields:
+                  - { name: en, label: English, widget: string, required: false }
+                  - { name: bn, label: Bangla, widget: string, required: false }
+              - name: body
+                label: Body
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: text }
+                  - { name: bn, label: Bangla, widget: text }
+          - name: metadata
+            label: SEO metadata
+            widget: object
+            fields:
+              - { name: title, label: Browser tab title, widget: string }
+              - { name: description, label: Meta description, widget: text }
+
+      - name: withdraw
+        label: Withdraw consent
+        file: content/pages/withdraw.json
+        format: json
+        fields:
+          - { name: slug, label: Slug, widget: hidden, default: withdraw }
+          - name: title
+            label: Page title
+            widget: object
+            fields:
+              - { name: en, label: English, widget: string }
+              - { name: bn, label: Bangla, widget: string }
+          - name: sections
+            label: Sections
+            widget: list
+            fields:
+              - name: heading
+                label: Heading
+                widget: object
+                required: false
+                fields:
+                  - { name: en, label: English, widget: string, required: false }
+                  - { name: bn, label: Bangla, widget: string, required: false }
+              - name: body
+                label: Body
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: text }
+                  - { name: bn, label: Bangla, widget: text }
+          - name: metadata
+            label: SEO metadata
+            widget: object
+            fields:
+              - { name: title, label: Browser tab title, widget: string }
+              - { name: description, label: Meta description, widget: text }
+
+      - name: resources
+        label: Resources
+        file: content/pages/resources.json
+        format: json
+        fields:
+          - { name: slug, label: Slug, widget: hidden, default: resources }
+          - name: title
+            label: Page title
+            widget: object
+            fields:
+              - { name: en, label: English, widget: string }
+              - { name: bn, label: Bangla, widget: string }
+          - name: sections
+            label: Sections
+            widget: list
+            fields:
+              - name: heading
+                label: Heading
+                widget: object
+                required: false
+                fields:
+                  - { name: en, label: English, widget: string, required: false }
+                  - { name: bn, label: Bangla, widget: string, required: false }
+              - name: body
+                label: Body
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: text }
+                  - { name: bn, label: Bangla, widget: text }
+          - name: metadata
+            label: SEO metadata
+            widget: object
+            fields:
+              - { name: title, label: Browser tab title, widget: string }
+              - { name: description, label: Meta description, widget: text }
+          - name: flags
+            label: Feature flags
+            widget: object
+            required: false
+            fields:
+              - { name: learningBriefAvailable, label: "Learning brief PDF live?", widget: boolean, default: false, hint: "Tick once /learning-brief.pdf is uploaded — the Resources page button activates automatically." }
+
+  - name: site
+    label: Site (nav + footer)
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: site
+        label: Navigation & footer
+        file: content/pages/site.json
+        format: json
+        fields:
+          - name: nav
+            label: Navigation labels
+            widget: object
+            fields:
+              - name: home
+                label: Home
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: bn, label: Bangla, widget: string }
+              - name: podcasts
+                label: Podcasts
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: bn, label: Bangla, widget: string }
+              - name: entrepreneurs
+                label: Entrepreneurs
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: bn, label: Bangla, widget: string }
+              - name: reels
+                label: Reels
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: bn, label: Bangla, widget: string }
+              - name: about
+                label: About
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: bn, label: Bangla, widget: string }
+              - name: resources
+                label: Resources
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: bn, label: Bangla, widget: string }
+          - name: footer
+            label: Footer copy
+            widget: object
+            fields:
+              - name: tagline
+                label: Tagline
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: bn, label: Bangla, widget: string }
+              - name: aboutHeading
+                label: About heading
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: bn, label: Bangla, widget: string }
+              - name: listenHeading
+                label: Listen heading
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: bn, label: Bangla, widget: string }
+              - name: projectHeading
+                label: Project heading
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: bn, label: Bangla, widget: string }
+              - name: withdrawLabel
+                label: Withdraw link label
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: bn, label: Bangla, widget: string }
+              - name: safeguardingLabel
+                label: Safeguarding link label
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: bn, label: Bangla, widget: string }
+              - name: auditLabel
+                label: Audit link label
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: bn, label: Bangla, widget: string }
+              - name: planIbCredit
+                label: Plan IB credit line
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: bn, label: Bangla, widget: string }
+              - name: capecCredit
+                label: CapeC credit line
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: bn, label: Bangla, widget: string }
+              - name: lastUpdatedLabel
+                label: "Last updated" label
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: bn, label: Bangla, widget: string }
+              - name: copyright
+                label: Copyright line
+                widget: object
+                fields:
+                  - { name: en, label: English, widget: string }
+                  - { name: bn, label: Bangla, widget: string }

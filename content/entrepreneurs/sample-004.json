@@ -1,0 +1,19 @@
+{
+  "id": "sample-004",
+  "displayName": "Tahmina",
+  "sector": "handicraft",
+  "district": "Satkhira",
+  "photoConsent": false,
+  "summary": {
+    "en": "Tahmina weaves jute and date-palm leaves into mats, baskets, and bags, working from a tin-roofed verandah she shares with her sister-in-law. Her order book is small but steady: a few NGO procurement orders a year, the occasional online buyer who finds her through a cousin in Dhaka. She is acutely aware that the same product sells for three or four times more once it leaves her hands, but the gap between her workshop and the buyer is filled with intermediaries she cannot name or contact directly. Her V2V Bridge episode focuses on the supply-chain opacity that keeps rural women's craft income artificially low. (Sample placeholder — replace with real consented profile before launch.)",
+    "bn": "তাহমিনা পাট ও খেজুর পাতা বুনে মাদুর, ঝুড়ি ও ব্যাগ বানান। টিনের চালের একটি বারান্দায় কাজ করেন, যা তিনি ভাবির সঙ্গে ভাগ করে ব্যবহার করেন। অর্ডার ছোট কিন্তু নিয়মিত: বছরে কয়েকটি এনজিও সংগ্রহ অর্ডার, মাঝে মাঝে ঢাকার এক চাচাতো ভাইয়ের মাধ্যমে পাওয়া অনলাইন ক্রেতা। তিনি ভালোভাবেই জানেন তাঁর হাত ছেড়ে যাওয়ার পরে একই পণ্যের দাম তিন-চারগুণ বেড়ে যায়, কিন্তু তাঁর কর্মশালা এবং চূড়ান্ত ক্রেতার মাঝখানে এমন কিছু মধ্যস্থতাকারী আছেন যাঁদের নাম বা যোগাযোগ তাঁর জানা নেই। তাঁর V2V Bridge পর্বটি গ্রামীণ নারীদের হাতের কাজের আয় কৃত্রিমভাবে কম রাখা সরবরাহ-শৃঙ্খলের অস্বচ্ছতাকে কেন্দ্রে রাখে। (নমুনা — চূড়ান্ত প্রকাশের আগে প্রতিস্থাপন করতে হবে।)"
+  },
+  "reelIds": ["sample-r05"],
+  "consentFormFilename": "sample-004_consent.pdf",
+  "published": false,
+  "reviewers": {
+    "ysc1": "PLACEHOLDER — YSC reviewer 1",
+    "ysc2": "PLACEHOLDER — YSC reviewer 2",
+    "projectLead": "PLACEHOLDER — Project Lead"
+  }
+}

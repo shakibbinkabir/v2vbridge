@@ -477,7 +477,7 @@ collections:
                   - { name: en, label: English, widget: string }
                   - { name: bn, label: Bangla, widget: string }
               - name: lastUpdatedLabel
-                label: "Last updated" label
+                label: '"Last updated" label'
                 widget: object
                 fields:
                   - { name: en, label: English, widget: string }
